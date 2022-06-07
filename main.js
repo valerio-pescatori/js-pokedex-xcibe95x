@@ -29,8 +29,11 @@ function insertPokemon(sprite, name, id, type) {
 
 function sortHtml() {
   var main = document.getElementById("main");
-  [].map
-    .call(main.children, Object)
+  Array.from(main.children)
     .sort((a, b) => a.id - b.id)
-    .forEach((elem) => main.appendChild(elem));
+    .forEach((el) => main.appendChild(el));
+  // [].map
+  //   .call(main.children, Object)
+  //   .sort((a, b) => a.id - b.id)
+  //   .forEach((elem) => main.appendChild(elem));
 }
